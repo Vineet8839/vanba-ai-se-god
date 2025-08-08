@@ -129,10 +129,10 @@ const UserAuthentication = () => {
               transition={{ duration: 0.5 }}
               className="mx-auto w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mb-4"
             >
-              <Sparkles className="w-8 h-8 text-white" />
+              <Sparkles className="w-8 h-8 text-black" />
             </motion.div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">VANBA SE GOD AI</h1>
-            <p className="text-blue-100 text-sm sm:text-base">
+            <h1 className="text-2xl sm:text-3xl font-bold text-black mb-2">VANBA SE GOD AI</h1>
+            <p className="text-black text-sm sm:text-base">
               {isLogin ? 'Welcome back, seeker of wisdom' : 'Begin your spiritual journey'}
             </p>
           </div>
@@ -148,6 +148,9 @@ const UserAuthentication = () => {
             onTogglePassword={() => setShowPassword(!showPassword)}
             onToggleAuthMode={toggleAuthMode}
             onOAuthSignIn={handleOAuthSignIn}
+            labelClassName="text-black"
+            inputClassName="text-black"
+            buttonClassName="text-black"
           />
 
           {/* Creator Attribution */}
@@ -155,17 +158,17 @@ const UserAuthentication = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
-            className="mt-8 text-center text-blue-100 text-xs sm:text-sm"
+            className="mt-8 text-center text-black text-xs sm:text-sm"
           >
-            <p>Created by <span className="font-semibold text-yellow-300">Vineet Pradhan</span></p>
+            <p>Created by <span className="font-semibold text-black">Vineet Pradhan</span></p>
             <p className="mt-1">
-              Team: <span className="text-blue-200">Aryan, Bhavik, Niraj, Abhishek</span>
+              Team: <span className="text-black">Aryan, Bhavik, Niraj, Abhishek</span>
             </p>
           </motion.div>
         </AuthContainer>
       </div>
-      </div>
-    );
+    </div>
+  );
   };
   
   export default UserAuthentication;
